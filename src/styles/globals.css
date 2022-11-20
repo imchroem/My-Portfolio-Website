@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* #endregion  /**======== Typography =========== */
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+  ::selection {
+    background: hsla(46 94.3% 58.8% / 0.7);
+  }
+  html::-webkit-scrollbar {
+    width: 10px;
+    //height: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    //border-radius: 100vh;
+    background: #ddd;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #282230;
+    //border-radius: 100vh;
+    //border: 3px solid #f6f7ed;
+  }
+
+  html::-webkit-scrollbar-thumb:hover {
+    background: #140d16;
+  }
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+@layer components {
+  .Btn {
+    @apply hidden h-6 cursor-pointer transition-all duration-150 ease-out hover:scale-125 md:inline-flex;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 2px hsla(0 0% 0% / 1);
+  }
+  .text-stroke-black {
+    -webkit-text-stroke: 2px hsla(0 0% 100% / 1);
+  }
+}
